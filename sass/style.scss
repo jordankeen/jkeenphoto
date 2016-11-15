@@ -10,8 +10,6 @@
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
-@import 'sidebar';
-@import 'comments';
 @import 'footer';
 /*
 ====================================
@@ -24,7 +22,7 @@ img {
 }
 
 body {
-	color: #333;
+	color: black;
 }
 
 .container {
@@ -32,15 +30,6 @@ body {
 	margin: 0 auto;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
-}
-
-.full {
-	width: 100%;
-}
 
 
 

@@ -1,14 +1,46 @@
-ul.menu {
-	margin: 0;
-	padding: 0;
-	li {
-		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
+
+
+// Navigation Styling
+
+header {
+	background-color: black;
+	.container {
+		.menu-navigation {
+			.inner-wrapper {
+				padding: 48px 60px;
+				.nav-logo {
+					background: url('images/photo-camera.png') no-repeat center;
+					background-size: contain;
+					height: 30px;
+					width: 36px;
+					float: left;
+				}
+				.mobile-menu-button {
+					background: transparent url('images/menu.svg') no-repeat center;
+					background-size: contain;
+					height: 45px;
+					width: 45px;
+					border: none;
+					float: right;
+				}
+			}
+		} 
+		.menu {
+			ul {
+				padding: 0;
+				margin: 0;
+				li {
+					list-style-type: none;
+					a {
+						color: white;
+						text-decoration: none;
+						font-size: 18px;
+						font-weight: 200;
+						font-family: 'dosis';
+					}
+				}
+			}
 		}
+		
 	}
 }

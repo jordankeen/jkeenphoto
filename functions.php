@@ -51,6 +51,9 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+	wp_enqueue_style('Dosis', "https://fonts.googleapis.com/css?family=Dosis:200,300,400");
+
+
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -68,6 +71,14 @@ function hackeryou_scripts() {
   	false, //dependencies
   	null, //version number
   	true //load in footer
+  );
+
+  wp_enqueue_script(
+    'masonry', //handle
+    get_template_directory_uri() . '/js/masonry.pkgd.min.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
   );
 
   wp_enqueue_script(
