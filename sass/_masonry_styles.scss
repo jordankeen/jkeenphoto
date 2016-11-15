@@ -1,0 +1,25 @@
+
+
+// Masonry Styles
+
+.port-container {
+
+}
+
+.grid-item {
+
+	width: calc(100% - 16px);
+	margin: 0 8px 16px;
+	img {
+		display: block;
+	}
+	@media screen and (min-width: 600px) {
+		width: calc(50% - 16px);
+	}
+	@media screen and (min-width: 960px) {
+		width: calc(33.33% - 16px);
+	}
+	@media screen and (min-width: 1400px) {
+		width: calc(25% - 16px);
+	}
+}

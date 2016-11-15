@@ -16,20 +16,21 @@
 <header>
 	<div class="container">
 		<div class="menu-navigation">
-			<div class="inner-wrapper">
-				<div class="nav-logo"></div>
+			<div class="inner-wrapper clearfix">
+				<!-- <div class="nav-logo"></div> -->
+				<h3>Jordan Keen Photography</h3>
 
 				<button class="mobile-menu-button"></button>
 
 			</div>
 		</div>
 
-		<div class="menu">
-			<?php wp_nav_menu( array(
-				'container' => false,
-				'theme_location' => 'primary'
-			)); ?>
-		</div>
+		
+		<?php wp_nav_menu( array(
+			'container' => false,
+			'theme_location' => 'primary'
+		)); ?>
+	
 	</div> <!-- /.container -->
 </header><!--/.header-->
 

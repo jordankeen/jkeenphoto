@@ -51,7 +51,7 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-	wp_enqueue_style('Dosis', "https://fonts.googleapis.com/css?family=Dosis:200,300,400");
+	wp_enqueue_style('Cutive Mono', "https://fonts.googleapis.com/css?family=Cutive+Mono");
 
 
 }
