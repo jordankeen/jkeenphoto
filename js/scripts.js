@@ -14,7 +14,7 @@ $(function(){
 	// Mobile Menu
 	$('.mobile-menu-button').on('click', function () {
 
-		$('.menu').slideToggle(250);
+		$('.menu-list-wrapper').slideToggle(250);
 
 	});
 

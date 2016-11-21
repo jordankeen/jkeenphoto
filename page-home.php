@@ -10,52 +10,45 @@ get_header();  ?>
 
   <div class="container">
 
-    <h1>Home Page</h1>
-
     <div class="port-container clearfix">
 
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/cntower-insta.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/bikersm.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/plantontable.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/cntower-insta.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/cntower-insta.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/plantontable.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/bikersm.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/plantontable.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/plantontable.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/bikersm.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/plantontable.jpg">
-		</figure>
-		<figure class="grid-item">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/bikersm.jpg">
-		</figure>
+    	<?php 
+		$photo_item_args = array(
+			'post_type' => 'photo_item',
+			'posts_per_page' => -1,
+			'meta_key' => 'order_number',
+			'orderby' => 'meta_value_num',
+			'order' => 'ASC',
+			'category_name' => 'one',
+			);
+		$photo_post_query = new WP_Query($photo_item_args);
+		if( $photo_post_query->have_posts() ) {
+			while( $photo_post_query->have_posts() ) {
+				$photo_post_query->the_post();
 
+				// Get Fields 
+				$image = get_field('image');
+				$title = get_field('title');
+				$description = get_field('description');
+
+				?>
+
+				<figure class="grid-item">
+
+					<img src="<?php echo $image['url'] ?>">
+
+					<a href="#" class="item-overlay">
+						<p>- View -</p>
+					</a>
+				</figure>
+				
+				<?php
+			}
+		}
+		wp_reset_postdata();
+		?>
 
     </div>
-
-
-
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
