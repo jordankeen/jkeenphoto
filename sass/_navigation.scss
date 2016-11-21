@@ -3,44 +3,93 @@
 // Navigation Styling
 
 header {
-	background-color: black;
+	background-color: white;
 	.container {
 		.menu-navigation {
+			border-bottom: 1px solid #d4d4d4;
 			.inner-wrapper {
-				padding: 48px 60px;
-				.nav-logo {
-					background: url('images/photo-camera.png') no-repeat center;
-					background-size: contain;
-					height: 30px;
-					width: 36px;
-					float: left;
+				padding: 24px 15px;
+				text-align: center;
+				a {
+					color: black;
+					font-size: 15px;
+					display: block;
+					margin-top: 26px;
 				}
 				.mobile-menu-button {
-					background: transparent url('images/menu.svg') no-repeat center;
+					background: transparent url('images/menu.png') no-repeat center;
 					background-size: contain;
-					height: 45px;
-					width: 45px;
+					height: 36px;
+					width: 36px;
+					margin-top: 15px;
 					border: none;
-					float: right;
+					outline: none;
 				}
 			}
+		}
+		.menu-list-wrapper {
+			padding: 48px 0 48px 48px;
+			border-bottom: 1px solid #d4d4d4;
+			display: none;
 		} 
 		.menu {
-			ul {
-				padding: 0;
-				margin: 0;
-				li {
-					list-style-type: none;
+			right: 0;
+			left: 0;
+			background-color: white;
+			padding: 0;
+			margin: 0;
+			li {
+				list-style-type: none;
+				a {
+					color: black;
+					text-decoration: none;
+					font-size: 14px;
+					display: block;
+					padding: 7px 0;
+				}
+			}
+		}	
+	}
+	@media screen and (min-width: 480px) {
+		.container {
+			.menu-navigation {
+				.inner-wrapper {
+					padding: 24px 24px;
 					a {
-						color: white;
-						text-decoration: none;
-						font-size: 18px;
-						font-weight: 200;
-						font-family: 'dosis';
+						float: left;
+					}
+					.mobile-menu-button {
+						float: right;
 					}
 				}
 			}
 		}
-		
+	}
+	@media screen and (min-width: 780px) {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 230px;
+		border-right: 1px solid #d4d4d4;
+		min-height: 100vh;
+		.container {
+			.menu-navigation {
+				.inner-wrapper {
+					padding: 48px 24px;
+					a {
+						float: none;
+						margin-top: 0;
+					}
+					.mobile-menu-button {
+						display: none;
+					}
+				}
+			}
+			.menu-list-wrapper {
+				display: block;
+				border-bottom: none;
+			}
+		}
 	}
 }

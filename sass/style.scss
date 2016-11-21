@@ -1,9 +1,9 @@
 /*!
 * Theme Name: jkeenphoto Theme (HY)
 * Theme URI: 
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Description: 
 * Version: 1.0
-* Author: HackerYou
+* Author: 
 * Author URI: http://hackeryou.com
 */
 
@@ -11,6 +11,7 @@
 @import 'typography';
 @import 'navigation';
 @import 'footer';
+@import 'masonry_styles';
 /*
 ====================================
 Default Styling
@@ -23,11 +24,24 @@ img {
 
 body {
 	color: black;
+	position: relative;
+	font-family: 'Cutive Mono', monospace;
 }
-
+a {
+	text-decoration: none;
+}
 .container {
-	max-width: 1200px;
 	margin: 0 auto;
+}
+.main {
+	padding: 0 16px;
+}
+@media screen and (min-width: 780px) {
+		
+	.main {
+		float: right;
+		width: calc(100% - 230px);
+	}
 }
 
 

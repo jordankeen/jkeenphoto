@@ -1,0 +1,46 @@
+
+
+// Masonry Styles
+
+.port-container {
+	margin-top: 16px;
+}
+
+.grid-item {
+	position: relative;
+	width: calc(100% - 10px);
+	margin: 0 5px 10px;
+	img {
+		display: block;
+	}
+	@media screen and (min-width: 992px) {
+		width: calc(50% - 10px);
+	}
+	@media screen and (min-width: 1160px) {
+		width: calc(33.33% - 10px);
+	}
+	@media screen and (min-width: 1600px) {
+		width: calc(25% - 10px);
+	}
+}
+.item-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.45);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	p {
+		margin: 0;
+		color: white;
+		font-size: 14px;
+	}
+}
+.grid-item:hover {
+	.item-overlay {
+		display: flex;
+	}
+}
